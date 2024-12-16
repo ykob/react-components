@@ -1,20 +1,20 @@
-import { ComponentProps } from "react";
-import { cva, cx } from "styled-system/css";
-import { AsChildProps, Slot } from "~/components/utils/";
+import { ComponentProps } from 'react';
+import { cva, cx } from 'styled-system/css';
+import { AsChildProps, Slot } from '~/components/utils/';
 
-type BaseButtonProps = AsChildProps<ComponentProps<"button">> & {
-  buttonSize?: "sm" | "md" | "lg";
+type BaseButtonProps = AsChildProps<ComponentProps<'button'>> & {
+  buttonSize?: 'sm' | 'md' | 'lg';
   className?: string;
 };
 
 export function BaseButton({
   asChild,
-  buttonSize = "md",
+  buttonSize = 'md',
   children,
   className,
   ...props
 }: BaseButtonProps) {
-  const Component = asChild ? Slot : "button";
+  const Component = asChild ? Slot : 'button';
 
   return (
     <Component
@@ -30,30 +30,30 @@ export function BaseButton({
 const styles = {
   container: cva({
     base: {
-      cursor: "pointer",
-      boxSizing: "border-box",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      rounded: "md",
-      fontWeight: "medium",
+      cursor: 'pointer',
+      boxSizing: 'border-box',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      rounded: 'md',
+      fontWeight: 'medium',
     },
     variants: {
       buttonSize: {
         sm: {
           h: 8,
           px: 3,
-          fontSize: "sm",
+          fontSize: 'sm',
         },
         md: {
           h: 10,
           px: 4,
-          fontSize: "md",
+          fontSize: 'md',
         },
         lg: {
           h: 12,
           px: 5,
-          fontSize: "lg",
+          fontSize: 'lg',
         },
       },
     },

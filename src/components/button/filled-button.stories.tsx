@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { css } from "styled-system/css";
-import { flex } from "styled-system/patterns";
-import { FilledButton } from "./";
+import { Meta, StoryObj } from '@storybook/react';
+import { css } from 'styled-system/css';
+import { flex } from 'styled-system/patterns';
+import { FilledButton } from './';
 
 const meta: Meta<typeof FilledButton> = {
-  title: "UI/Button/FilledButton",
+  title: 'UI/Button/FilledButton',
   component: FilledButton,
 };
 
@@ -13,19 +13,19 @@ export default meta;
 type Story = StoryObj<typeof FilledButton>;
 
 export const FilledButtonStory: Story = {
-  name: "FilledButton",
+  name: 'FilledButton',
   render: () => (
-    <div className={flex({ direction: "column", gap: 4 })}>
-      <h1 className={css({ textStyle: "heading.primary" })}>
+    <div className={flex({ direction: 'column', gap: 4 })}>
+      <h1 className={css({ textStyle: 'heading.primary' })}>
         FilledButton Component
       </h1>
-      <h2 className={css({ textStyle: "heading.secondary" })}>Primary</h2>
+      <h2 className={css({ textStyle: 'heading.secondary' })}>Primary</h2>
       <div className={flex({ gap: 4 })}>
         <FilledButton buttonSize="sm">Button</FilledButton>
         <FilledButton buttonSize="md">Button</FilledButton>
         <FilledButton buttonSize="lg">Button</FilledButton>
       </div>
-      <h2 className={css({ textStyle: "heading.secondary" })}>Secondary</h2>
+      <h2 className={css({ textStyle: 'heading.secondary' })}>Secondary</h2>
       <div className={flex({ gap: 2 })}>
         <FilledButton buttonSize="sm" buttonColor="secondary">
           Button
@@ -37,7 +37,7 @@ export const FilledButtonStory: Story = {
           Button
         </FilledButton>
       </div>
-      <h2 className={css({ textStyle: "heading.secondary" })}>Success</h2>
+      <h2 className={css({ textStyle: 'heading.secondary' })}>Success</h2>
       <div className={flex({ gap: 2 })}>
         <FilledButton buttonSize="sm" buttonColor="success">
           Button
@@ -49,7 +49,7 @@ export const FilledButtonStory: Story = {
           Button
         </FilledButton>
       </div>
-      <h2 className={css({ textStyle: "heading.secondary" })}>Warning</h2>
+      <h2 className={css({ textStyle: 'heading.secondary' })}>Warning</h2>
       <div className={flex({ gap: 2 })}>
         <FilledButton buttonSize="sm" buttonColor="warning">
           Button
@@ -61,7 +61,7 @@ export const FilledButtonStory: Story = {
           Button
         </FilledButton>
       </div>
-      <h2 className={css({ textStyle: "heading.secondary" })}>Danger</h2>
+      <h2 className={css({ textStyle: 'heading.secondary' })}>Danger</h2>
       <div className={flex({ gap: 2 })}>
         <FilledButton buttonSize="sm" buttonColor="danger">
           Button
